@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val Binding : ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        Binding.setDatastring("Test Code")
+        Binding.datastring = ("Test Code")
+        Binding.datastringButton = BindingChangbutton()
 
     }
 }

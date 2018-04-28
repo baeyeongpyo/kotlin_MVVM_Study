@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
      <data>
          <variable name="datastring" type="String"/>
+         <variable name="datastringButton" type="com.example.yeongpyo.kotlin_mvvm_study.BindingChangbutton"/>
      </data>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -19,6 +20,12 @@
         app:layout_constraintRight_toRightOf="parent"
         android:text="@{String.format(@string/viewTextTest, datastring)}"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{datastringButton.change}"
+        android:onClick="@{() -> datastringButton.ButtonClick(&quot;aaaa&quot;)}"/>
 
 </android.support.constraint.ConstraintLayout>
 
